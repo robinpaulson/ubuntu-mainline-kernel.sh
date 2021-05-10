@@ -5,7 +5,7 @@
 # Ubuntu Kernel PPA info
 ppa_host="kernel.ubuntu.com"
 ppa_index="/~kernel-ppa/mainline/"
-ppa_key="17C622B0"
+ppa_key="17C622B0"'
 
 # If quiet=1 then no log messages are printed (except errors)
 quiet=0
@@ -464,7 +464,7 @@ Optional:
   -do, --download-only Only download the deb files, do not install them
   -ns, --no-signature  Do not check the gpg signature of the checksums file
   -nc, --no-checksum   Do not check the sha checksums of the .deb files
-  -d, --debug          Show debug information, all internal command's echo their output
+  -d, --debug          Show debug information, all internal commands echo their output
   --rc                 Also include release candidates
   --yes                Assume yes on all questions (use with caution!)
 "
@@ -559,7 +559,7 @@ Optional:
             log
 
             if containsElement "$version" "${LOCAL_VERSIONS[@]}"; then
-                logn "Latest version is $version but seems its already installed"
+                logn "Latest version is $version but it is already installed"
             else
                 logn "Latest version is: $version"
             fi
@@ -816,7 +816,7 @@ Optional:
                 echo "${pckgs[@]}"
 
                 if [ $assume_yes -eq 0 ]; then
-                    echo -n "Are you really sure? Do you still have another kernel installed? (y/N)"
+                    echo -n "Are you sure? Do you have another kernel installed? (y/N)"
 
                     read -rsn1 continue
                     echo ""
